@@ -8,4 +8,4 @@ npm install
 npm run dev
 ```
 
-[deploy]()
+[deploy](https://viperouss14.github.io/Test-Landing/)
