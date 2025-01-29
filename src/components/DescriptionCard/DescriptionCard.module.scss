@@ -1,0 +1,38 @@
+.card {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 14px;
+  box-sizing: border-box;
+
+  & + & {
+    margin-top: 26px;
+  }
+
+  @media screen and (max-width: 568px) {
+    padding-left: 5px;
+
+    & + & {
+      margin-top: 21px;
+    }
+  }
+}
+
+.info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  margin: 9px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 105%;
+  color: var(--color-blur-text);
+  margin: 0;
+}

@@ -1,0 +1,53 @@
+.button {
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  font-weight: 600;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.submit {
+  width: 266px;
+  height: 60px;
+  margin-top: 60px;
+  box-shadow: 0px 0px 30px rgba(255, 222, 0, 0.35),
+    inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+  color: #000;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  background-color: var(--color-accent-text);
+
+  @media screen and (max-width: 568px) {
+    grid-area: button;
+    margin: 37px auto 0;
+  }
+
+  &:hover {
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-accent-text);
+  }
+}
+
+.login {
+  align-self: flex-start;
+  width: 161px;
+  height: 50px;
+  border: 1px solid var(--color-accent-text);
+
+  @media screen and (max-width: 1100px) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+
+  @media screen and (max-width: 568px) {
+    align-self: start;
+    width: 151px;
+    height: 40px;
+  }
+
+  &:hover {
+    background-color: var(--color-accent-text);
+  }
+}

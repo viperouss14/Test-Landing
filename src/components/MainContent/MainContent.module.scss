@@ -1,0 +1,121 @@
+.title {
+  position: relative;
+  z-index: 1;
+  max-width: 532px;
+  margin: 90px 0 0 8px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+
+  > span {
+    color: var(--color-accent-text);
+  }
+}
+
+.mainInfo {
+  display: flex;
+  margin-top: 50px;
+}
+
+.infoTitle {
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.price {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 22px 0 0 13px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  background: var(--color-accent);
+
+  > span {
+    position: absolute;
+    margin-inline-start: 4px;
+    inset-inline-start: 52px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 2.5s linear infinite;
+  }
+
+  &::after {
+    animation-delay: 1.25s;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .title {
+    max-width: 260px;
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .mainInfo {
+    flex-direction: column;
+    margin-top: 23px;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: "title price" "button button";
+    gap: 0px 29px;
+    margin: 0 auto;
+  }
+  .infoTitle {
+    align-self: center;
+  }
+  .price {
+    align-self: center;
+    margin: 0 20px 0 0;
+  }
+}
